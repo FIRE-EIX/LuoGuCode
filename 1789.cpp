@@ -2,6 +2,10 @@
 // Created by XIE on 2021/4/21.
 // https://www.luogu.com.cn/problem/P1789
 
+//
+// Created by XIE on 2021/4/21.
+// https://www.luogu.com.cn/problem/P1789
+
 #include <iostream>
 
 using namespace std;
@@ -28,6 +32,10 @@ int main() {
             if (isLegal(x + j, y)) ans[x + j][y] = 0;
             if (isLegal(x, y + j)) ans[x][y + j] = 0;
         }
+        if (isLegal(x + 1, y + 1)) ans[x + 1][y + 1] = 0;
+        if (isLegal(x + 1, y - 1)) ans[x + 1][y - 1] = 0;
+        if (isLegal(x - 1, y + 1)) ans[x - 1][y + 1] = 0;
+        if (isLegal(x - 1, y - 1)) ans[x - 1][y - 1] = 0;
     }
     for (int i = 0; i < k; i++) {
         int x, y;
